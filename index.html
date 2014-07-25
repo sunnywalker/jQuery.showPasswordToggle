@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>jQuery.showPasswordToggle</title>
+    <style>
+    body { max-width: 40em; margin: 0 auto; font-family: sans-serif; }
+    h2 { border-top: 1px solid #ccc; margin-top: 1em; padding-top: 1em; }
+    pre.js { border: 1px solid #def; background-color: aliceblue; border-radius: 0.5em; padding: 1em; }
+    label { font-size: 0.9em; font-weight: bold; display: block; }
+    .toggle-password-label { display: inline; font-size: 1em; font-weight: normal; }
+    </style>
+    <!--
+        Normally, the scripts would go at the end of the page, but I put
+        them in the head to inline the examples so their code remains in
+        context.
+    -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="jquery.showPasswordToggle.js"></script>
+</head>
+
+<body>
+<div id="container">
+<h1>jQuery.showPasswordToggle</h1>
+<p><em>jQuery plugin for adding a show/hide checkbox toggle to display/hide password fields.</em></p>
+<p><a href="https://github.com/sunnywalker/jQuery.showPasswordToggle">Project on GitHub</a></p>
+
+<h2>Basic Example</h2>
+<p class="info">This is the most basic example.</p>
+<p><label for="example-1">Password:</label> <input type="password" name="password" id="example-1"></p>
+<script data-example>$('#example-1').showPasswordToggle();</script>
+
+<h2>Pre-filled Example</h2>
+<p class="info">Pre-filled field values are preserved.</p>
+<p><label for="example-2">Password:</label> <input type="password" name="password" id="example-2" value="zxcvbn"></p>
+<script data-example>$('#example-2').showPasswordToggle();</script>
+
+<h2>Extra Tag Attributes Example</h2>
+<p class="info">Additional attributes such as placeholder, maxlength and so on are preserved.</p>
+<p><label for="example-3">Password:</label> <input type="password" name="password" id="example-3" size="25" maxlength="20" placeholder="≤ 20 characters" required></p>
+<style>input:invalid { background-color: #fee; }</style>
+<script data-example>$('#example-3').showPasswordToggle();</script>
+
+<h2>Different Label Example</h2>
+<p class="info">Use different text for the toggle label.</p>
+<p><label for="example-4">ʻŌlelo huna:</label> <input type="password" name="password" id="example-4"></p>
+<script data-example>$('#example-4').showPasswordToggle({label:'Hōʻike i ka ʻōlelo huna'});</script>
+
+<h2>Text Input Example</h2>
+<p class="info">Apply the plugin to an input of <code>type=&quot;text&quot;</code> instead of a password input. This automatically checks the show password checkbox.</p>
+<p><label for="example-5">Employee Id:</label> <input type="text" name="employee_id" id="example-5" value="123456"></p>
+<script data-example>$('#example-5').showPasswordToggle({label:'Show Employee Id'});</script>
+
+<h2>Label Wrapper Example</h2>
+<p class="info">Surround the added label and checkbox with a wrapper tag.</p>
+<p><label for="example-6">Password:</label> <input type="password" name="password" id="example-6"></p>
+<style>.toggle-password-wrapper{background-color:yellow;}</style>
+<script data-example>// CSS: .toggle-password-wrapper { background-color: yellow; }
+$('#example-6').showPasswordToggle({wrapperTag:'span'});</script>
+</div>
+
+<h2>Multiple Plugin Application Protection</h2>
+<p class="info">The plugin prevents re-applying itself to inputs to which it has already been added.</p>
+<p><label for="example-7">Password:</label> <input type="password" name="password" id="example-7"></p>
+<script data-example>$('#example-7').showPasswordToggle({label:'First show password'});
+$('#example-7').showPasswordToggle({label:'Second show password'});</script>
+</div>
+
+<script>
+// display the source code for each example in the page.
+// this is for the demo page, not the plugin's functionality
+$('script[data-example]').each(function() {
+    var t = $(this),
+        pre = $('<pre class="js" />');
+    pre.text(t.text());
+    t.after(pre);
+});
+</script>
+</body>
+</html>
