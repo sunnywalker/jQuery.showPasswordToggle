@@ -13,6 +13,9 @@ jQuery plugin for adding a show/hide checkbox toggle to display/hide password fi
 <script src="/path/to/jquery.showPasswordToggle.min.js"></script>
 <script>$('#pwd').showPasswordToggle();</script>
 ```
+# Demo
+
+![alt text](http://i.imgur.com/7jZ44TI.gif "Demo GIF")
 
 # Options
 
