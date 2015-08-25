@@ -1,0 +1,29 @@
+{
+    "name": "showPasswordToggle",
+    "description": "Add a show/hide checkbox toggle to display/hide password fields.",
+    "keywords": [
+        "password",
+        "toggle",
+        "input",
+        "checkbox",
+        "show",
+        "hide"
+    ],
+    "authors": [
+        {
+            "name": "Sunny Walker",
+            "homepage": "http://www.miraclesalad.com/"
+        }
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/sunnywalker/jQuery.showPasswordToggle",
+    "year": "2014",
+    "version": "1.0.0",
+    "dependencies": {
+        "jquery": ">=1.7"
+    },
+    "main": "jquery.showPasswordToggle.js",
+    "ignore": [
+        "**/.*"
+    ]
+}
