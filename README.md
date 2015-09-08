@@ -21,7 +21,7 @@ jQuery plugin for adding a show/hide checkbox toggle to display/hide password fi
 
 | Option | Type | Default | Description |
 | ------ | ---- | ------- | ----------- |
-| `checkboxCass` | string | toggle-password-checkbox | Class(es) applied to the toggling checkbox |
+| `checkboxClass` | string | toggle-password-checkbox | Class(es) applied to the toggling checkbox |
 | `label` | string | Show password | Label text for the checkbox |
 | `labelClass` | string | toggle-password-label | Class(es) applied to the label |
 | `wrapperClass` | string | toggle-password-wrapper | Class(es) applied to the wrapper tag (if used) |

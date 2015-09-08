@@ -1,6 +1,6 @@
 /*!
  *  jQuery.showPasswordToggle
- *  @version 1.0.0
+ *  @version 1.0.1
  *  @author Sunny Walker, University of Hawaiʻi at Hilo, http://hilo.hawaii.edu/
  *  @license MIT
  *  Project: https://github.com/sunnywalker/jQuery.showPasswordToggle
@@ -22,7 +22,7 @@
             settings = $.extend({}, defaults, options);
         return this.each(function() {
             var input = $(this),
-                label = $('<label class="'+settings.labelClass+'">'+settings.label+'</label>'),
+                label = $('<label class="'+settings.labelClass+'"> '+settings.label+'</label>'),
                 checkbox = $('<input type="checkbox" class="" />'),
                 wrapper = false;
             // don't do anything for non-input elements
